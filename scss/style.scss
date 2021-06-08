@@ -453,3 +453,13 @@ body {
 		}
 	}
 }
+
+.footer {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	background-color: #404149;
+	padding: 20px 0;
+	@include adaptiv-font(16, 14, 1920);
+	color: white;
+}
