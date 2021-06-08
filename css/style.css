@@ -353,3 +353,53 @@ body {
 .request__btn:hover a {
   color: white;
 }
+
+.about__wrapper {
+  margin-bottom: 100px;
+}
+
+.about__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.about__content-item {
+  padding: 44px 80px;
+  background-color: #f7f7f7;
+  -webkit-transition: -webkit-transform 0.3s linear;
+  transition: -webkit-transform 0.3s linear;
+  transition: transform 0.3s linear;
+  transition: transform 0.3s linear, -webkit-transform 0.3s linear;
+}
+
+.about__content-item:nth-child(n + 4) {
+  margin-top: 20px;
+}
+
+.about__content-item:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.about__content-title {
+  font-family: "Oswald", sans-serif;
+  font-weight: 500;
+  font-size: calc(15pxpx + 6px * ((100vw - 320px) / 1600));
+  color: #000;
+  line-height: 31px;
+  text-transform: uppercase;
+}
+
+.separator {
+  background-image: url("../img/towers.png");
+  height: 400px;
+}

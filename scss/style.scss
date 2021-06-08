@@ -276,3 +276,40 @@ body {
 		}
 	}
 }
+
+.about {
+	&__wrapper {
+		margin-bottom: 100px;
+	}
+	&__content {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		align-items: center;
+		text-align: center;
+		&-item {
+			padding: 44px 80px;
+			background-color: #f7f7f7;
+			transition: transform 0.3s linear;
+			&:nth-child(n + 4) {
+				margin-top: 20px;
+			}
+			&:hover {
+				transform: scale(1.2);
+			}
+		}
+		&-title {
+			font-family: "Oswald", sans-serif;
+			font-weight: 500;
+			@include adaptiv-font(21px, 15px, 1920);
+			color: #000;
+			line-height: 31px;
+			text-transform: uppercase;
+		}
+	}
+}
+
+.separator {
+	background-image: url("../img/towers.png");
+	height: 400px;
+}
