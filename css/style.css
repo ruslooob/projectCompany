@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -383,6 +384,7 @@ body {
   transition: -webkit-transform 0.3s linear;
   transition: transform 0.3s linear;
   transition: transform 0.3s linear, -webkit-transform 0.3s linear;
+  cursor: pointer;
 }
 
 .about__content-item:nth-child(n + 4) {
@@ -420,6 +422,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  cursor: pointer;
 }
 
 .answers__content-title {
@@ -473,4 +476,74 @@ body {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+}
+
+.partners__content img {
+  -webkit-transition: -webkit-transform 0.3s linear;
+  transition: -webkit-transform 0.3s linear;
+  transition: transform 0.3s linear;
+  transition: transform 0.3s linear, -webkit-transform 0.3s linear;
+}
+
+.partners__content img:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.feedbacks__wrapper {
+  padding-bottom: 50px;
+}
+
+.feedbacks__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.feedbacks__content-item {
+  max-width: 350px;
+  padding: 20px;
+  -webkit-transition: -webkit-transform 0.3s linear;
+  transition: -webkit-transform 0.3s linear;
+  transition: transform 0.3s linear;
+  transition: transform 0.3s linear, -webkit-transform 0.3s linear;
+}
+
+.feedbacks__content-item:nth-child(2) {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.feedbacks__content-item:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.feedbacks__quote {
+  padding: 50px 30px 30px 30px;
+  background-color: #f7f7f7;
+  position: relative;
+}
+
+.feedbacks__quote:before {
+  position: absolute;
+  top: 5px;
+  content: "“";
+  font-size: calc(30px + 66 * ((100vw - 320px) / 1600));
+  color: #f7654a;
+  font-weight: 700;
+}
+
+.feedbacks__author {
+  font-family: "Oswald", sans-serif;
+  font-size: calc(16px + 2 * ((100vw - 320px) / 1600));
+  font-weight: 500;
+  color: black;
+  margin-top: 20px;
+}
+
+.feedbacks__author span {
+  color: #f7654a;
 }
