@@ -191,4 +191,165 @@ body {
   line-height: 27px;
   -webkit-transition: color 0.2s linear;
   transition: color 0.2s linear;
+  text-align: center;
+}
+
+.title {
+  font-family: "Oswald", sans-serif;
+  font-size: calc(20px + 16 * ((100vw - 320px) / 1600));
+  font-weight: 500;
+  color: #404149;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 50px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.projects__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 50px;
+}
+
+.projects__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.projects__content-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 0.2s linear;
+  transition: -webkit-transform 0.2s linear;
+  transition: transform 0.2s linear;
+  transition: transform 0.2s linear, -webkit-transform 0.2s linear;
+}
+
+.projects__content-item:nth-child(2) {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.projects__content-item:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.projects__content-sub-title {
+  font-family: "Oswald", sans-serif;
+  font-weight: 500;
+  font-size: calc(20px + 4 * ((100vw - 320px) / 1600));
+  color: #404149;
+  margin-top: 50px;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.projects__content-sub-title::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: -100%;
+  height: 6px;
+  width: 15%;
+  background-color: #f7654a;
+}
+
+.projects__content-text {
+  font-size: calc(15px + 1 * ((100vw - 320px) / 1600));
+  line-height: 20px;
+}
+
+.request {
+  background-color: #f7654a;
+  color: white;
+}
+
+.request__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px 0;
+}
+
+.request__text {
+  font-family: "Oswald", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.request__big-text {
+  font-size: calc(24px + 24 * ((100vw - 320px) / 1600));
+  margin-bottom: 25px;
+}
+
+.request__small-text {
+  font-size: calc(20px + 4 * ((100vw - 320px) / 1600));
+}
+
+.request__btn {
+  font-family: "Oswald", sans-serif;
+  font-weight: 500;
+  font-size: calc(13px + 1 * ((100vw - 320px) / 1600));
+  background-color: white;
+  padding: 10px;
+  border: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 50px;
+  cursor: pointer;
+  outline: none;
+  -webkit-transition: background-color 0.2s linear;
+  transition: background-color 0.2s linear;
+}
+
+.request__btn::before {
+  content: url("../img/letter-icon.svg");
+  margin-right: 10px;
+}
+
+.request__btn a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+  -webkit-transition: color 0.2s linear;
+  transition: color 0.2s linear;
+}
+
+.request__btn:hover {
+  background-color: deeppink;
+}
+
+.request__btn:hover a {
+  color: white;
 }
