@@ -316,9 +316,12 @@ body {
 
 .answers {
 	&__wrapper {
+		padding-bottom: 70px;
 	}
 	&__content {
 		&-item {
+			display: flex;
+			flex-direction: column;
 		}
 		&-title {
 			font-family: "Oswald", sans-serif;
@@ -344,6 +347,9 @@ body {
 		}
 		&-text {
 			display: none;
+			padding: 15px;
+			max-width: 730px;
+			line-height: 22px;
 		}
 	}
 }
