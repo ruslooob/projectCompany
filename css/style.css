@@ -153,6 +153,20 @@ body {
           align-items: center;
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
+  padding: 10px 35px;
+  cursor: pointer;
+}
+
+.intro__expirience-section:hover {
+  background-color: #f7654a;
+}
+
+.intro__expirience-section:hover .intro__expirience-number {
+  color: white;
+}
+
+.intro__expirience-section:hover .intro__expirience-small-text {
+  color: white;
 }
 
 .intro__expirience-number {
@@ -160,6 +174,8 @@ body {
   font-size: calc(50px + 22 * ((100vw - 320px) / 1600));
   font-weight: 500;
   line-height: 100px;
+  -webkit-transition: color 0.2s linear;
+  transition: color 0.2s linear;
 }
 
 .intro__expirience-big-text {
@@ -173,4 +189,6 @@ body {
   font-size: calc(15px + 3 * ((100vw - 320px) / 1600));
   font-weight: 500;
   line-height: 27px;
+  -webkit-transition: color 0.2s linear;
+  transition: color 0.2s linear;
 }

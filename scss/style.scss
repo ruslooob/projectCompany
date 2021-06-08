@@ -124,12 +124,24 @@ body {
 
 			font-family: "Oswald", sans-serif;
 			text-transform: uppercase;
+			padding: 10px 35px;
+			cursor: pointer;
+			&:hover {
+				.intro__expirience-number {
+					color: white;
+				}
+				.intro__expirience-small-text {
+					color: white;
+				}
+				background-color: #f7654a;
+			}
 		}
 		&-number {
 			color: #f7654a;
 			@include adaptiv-font(72, 50, 1920);
 			font-weight: 500;
 			line-height: 100px;
+			transition: color 0.2s linear;
 		}
 		&-big-text {
 			color: black;
@@ -141,6 +153,7 @@ body {
 			@include adaptiv-font(18, 15, 1920);
 			font-weight: 500;
 			line-height: 27px;
+			transition: color 0.2s linear;
 		}
 	}
 }
