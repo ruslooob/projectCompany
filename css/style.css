@@ -403,3 +403,33 @@ body {
   background-image: url("../img/towers.png");
   height: 400px;
 }
+
+.answers__content-title {
+  font-family: "Oswald", sans-serif;
+  font-size: calc(20px + 4 * ((100vw - 320px) / 1600));
+  color: #f7654a;
+  text-transform: uppercase;
+  font-weight: 500;
+  line-height: 35px;
+  position: relative;
+  display: inline-block;
+  padding: 5px;
+  -webkit-transition: background-color 0.3s linear, color 0.3s linear;
+  transition: background-color 0.3s linear, color 0.3s linear;
+}
+
+.answers__content-title::before {
+  position: absolute;
+  left: -25px;
+  top: -3px;
+  content: url("../img/triangle-left-icon.svg");
+}
+
+.answers__content-title:hover {
+  background-color: #f7654a;
+  color: black;
+}
+
+.answers__content-text {
+  display: none;
+}

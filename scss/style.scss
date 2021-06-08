@@ -313,3 +313,37 @@ body {
 	background-image: url("../img/towers.png");
 	height: 400px;
 }
+
+.answers {
+	&__wrapper {
+	}
+	&__content {
+		&-item {
+		}
+		&-title {
+			font-family: "Oswald", sans-serif;
+			@include adaptiv-font(24, 20, 1920);
+			color: #f7654a;
+			text-transform: uppercase;
+			font-weight: 500;
+			line-height: 35px;
+			position: relative;
+			display: inline-block;
+			padding: 5px;
+			transition: background-color 0.3s linear, color 0.3s linear;
+			&::before {
+				position: absolute;
+				left: -25px;
+				top: -3px;
+				content: url("../img/triangle-left-icon.svg");
+			}
+			&:hover {
+				background-color: #f7654a;
+				color: black;
+			}
+		}
+		&-text {
+			display: none;
+		}
+	}
+}
