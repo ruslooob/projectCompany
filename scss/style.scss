@@ -9,6 +9,12 @@ body {
 	color: #999999;
 }
 
+@mixin adaptiv-font($pcSize, $mobSize, $maxWidth) {
+	$addSize: $pcSize - $mobSize;
+	$maxWidth: $maxWidth - 320;
+	font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+}
+
 .wrapper {
 	max-width: 1920px;
 	width: 100%;
@@ -38,7 +44,7 @@ body {
 		cursor: pointer;
 		padding: 5px;
 		&:hover {
-			background-color: lightgray;
+			background-color: rgba($color: lightgray, $alpha: 0.1);
 		}
 	}
 	&__burger {
@@ -71,6 +77,70 @@ body {
 				background-color: #f7654a;
 			}
 			background-color: white;
+		}
+	}
+	&__title {
+		display: flex;
+		flex-direction: column;
+
+		font-family: "Oswald", sans-serif;
+		text-transform: uppercase;
+		text-align: center;
+		color: white;
+
+		margin-top: 100px; // !
+
+		&-wrapper {
+			max-width: 700px; // !
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+	&__main-title {
+		// font-size: 64px; // !
+		// 20px - наименьший шрифт, который мы хотим получить
+		// 64 - 20 разница между минимальным и максимальным шрифтом
+		// 100vw - 1920 отношение между всей шириной экрана и макета
+		@include adaptiv-font(64, 20, 1920);
+		font-weight: 500;
+		line-height: 94.85px;
+	}
+	&__sub-title {
+		// !
+		@include adaptiv-font(18, 15, 1920);
+		line-height: 26.68px;
+		margin-top: 30px;
+	}
+	&__expirience {
+		display: flex;
+		justify-content: space-around;
+		background-color: #f7f7f7;
+		margin-top: 100px; // 170px
+		padding: 50px 150px;
+		&-section {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			font-family: "Oswald", sans-serif;
+			text-transform: uppercase;
+		}
+		&-number {
+			color: #f7654a;
+			@include adaptiv-font(72, 50, 1920);
+			font-weight: 500;
+			line-height: 100px;
+		}
+		&-big-text {
+			color: black;
+			@include adaptiv-font(36, 20, 1920);
+			font-weight: 500;
+			line-height: 53px;
+		}
+		&-small-text {
+			@include adaptiv-font(18, 15, 1920);
+			font-weight: 500;
+			line-height: 27px;
 		}
 	}
 }
