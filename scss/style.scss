@@ -424,3 +424,32 @@ body {
 		}
 	}
 }
+
+.contacts {
+	text-align: center;
+	font-family: "Oswald", sans-serif;
+	font-weight: 500;
+	text-transform: uppercase;
+	@include adaptiv-font(24, 16, 1920);
+	line-height: 35px;
+	&__wrapper {
+		padding-bottom: 50px;
+	}
+	&__content {
+		display: flex;
+		justify-content: space-around;
+	}
+	&__item {
+		transition: transform 0.3s linear;
+		cursor: pointer;
+		&-subtitle {
+			color: black;
+			.orange {
+				color: #f7654a;
+			}
+		}
+		&:hover {
+			transform: scale(1.2);
+		}
+	}
+}
